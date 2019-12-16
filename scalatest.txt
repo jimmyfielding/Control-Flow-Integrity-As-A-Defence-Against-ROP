@@ -1,0 +1,1 @@
+$ scalac -cp scalatest-app_2.12.3-3.0.4.jar StackSpec.scala

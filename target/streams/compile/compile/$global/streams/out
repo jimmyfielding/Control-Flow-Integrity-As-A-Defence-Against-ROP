@@ -1,0 +1,5 @@
+[0m[[0m[33mwarn[0m] [0m[0m/Users/God/Desktop/fyp/src/main/scala/CFICodegen.scala:128:3: match may not be exhaustive.[0m
+[0m[[0m[33mwarn[0m] [0m[0mIt would fail on the following input: Div()[0m
+[0m[[0m[33mwarn[0m] [0m[0m		binOp match {[0m
+[0m[[0m[33mwarn[0m] [0m[0m		^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

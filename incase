@@ -1,0 +1,131 @@
+/*def program: Parser[ProgramAST] = {
+  //declaration | declaration program
+  /*(declaration ~ program) ^^ {
+    case a ~ b => {
+      b match {
+        case _ => new ProgramAST(declaration)
+        case declaration => declaration ~ program
+      }
+    }
+  }
+
+  rep1(declaration)
+
+}
+
+def declaration: Parser[DeclarationAST] = {
+  //`def` identifier (variableDec) `=` block
+  //noOfArgs needs resolving
+  (T_Def ~ identifier ~ T_LeftBracket ~ variableDec ~ T_RightBracket ~ T_Equal ~ block) ^^ {
+    case a ~ b ~ c ~ d ~ e ~ f ~ g => new DeclarationAST(b.s, 0, g)
+  }
+}
+
+def variableDec: Parser[ParserAST] = {
+  //"" | variableDecMult
+  (variableDecMult) ^^ {
+    case a => {
+      a match {
+        case None =>
+        case _ => variableDecMult
+      }
+    }
+  }
+}
+
+def variableDecMult: Parser[ParserAST] = {
+  //identifier | variableDecMult, identifier
+  (variableDecMult ~ T_Comma ~ identifier) ^^ {
+    case a ~ b ~ c => {
+      b c match {
+        case None => identifier
+        case _ => variableDecMult ++ identifier
+      }
+    }
+  }
+}
+
+def block: Parser[ExpressionAST] = {
+  //leftCurlyBracket expressionMult rightCurlyBracket
+  (T_LeftCurlyBracket ~ expressionMult ~ T_RightCurlyBracket) ^^ (_ => expressionMult)
+}
+
+def expressionMult: Parser[ExpressionAST] = {
+  //expression | expression; expressionMult
+  (expression ~ T_SemiColon ~ expressionMult) ^^ {
+    case a ~ b ~ c => {
+      b match {
+        case T_SemiColon => expression ++ expressionMult
+        case _ => expression
+      }
+    }
+  }
+}
+
+def expression: Parser[ExpressionAST] = {
+  /*intLiteral |
+  identifier |
+  `if` expression comp expression then block `else` block |
+  (expression binop expression) |
+  block |
+  `while` expression comp expression `do` block |
+  repeat block until expression comp expression |
+  identifier := expression |
+  identifier (args) |
+
+  intLiteral | identifier | `if` | binExp | block | `while` | repeatUntil | assign | invoke
+
+}
+
+def `if`: Parser[ExpressionAST] = {
+  (T_If ~ expression ~ comp ~ expression ~ T_Then ~ block ~ T_Else ~ block) ^^ {
+    case a ~ b ~ c ~ d ~ e ~ f ~ g ~ h => new IfAST(b,c,d,f,g)
+  }
+}
+
+def binExp: Parser[ExpressionAST] = {
+  (expression ~ binop ~ expression) ^^ {
+    case a ~ b ~ c => new BinExpAST(a,b,c)
+  }
+}
+
+def `while`: Parser[ExpressionAST] = {
+  (T_While ~ expression ~ comp ~ expression ~ T_Do ~ block) ^^ {
+    case a ~ b ~ c ~ d ~ e ~ f => new WhileAST(b,c,d,f)
+  }
+}
+
+def repeatUntil: Parser[ExpressionAST] = {
+  (T_Repeat ~ block ~ T_Until ~ expression ~ comp ~ expression) ^^ {
+    case a ~ b ~ c ~ d ~ e ~ f => new RepeatAST(b,d,e,f)
+  }
+}
+
+def assign: Parser[ExpressionAST] = {
+  (identifier ~ T_Assign ~ expression) ^^ {
+    case a ~ b ~ c => new AssignAST(b,c)
+  }
+}
+
+def invoke: Parser[ExpressionAST] = {
+  (identifier ~ args) ^^ {
+    case a ~ b => new InvokeAST(a,b)
+  }
+}
+
+def args: Parser[ExpressionAST] = {
+  //"" | argsMult
+  argsMult ^^ argsMult
+}
+
+def argsMult: Parser[ExpressionAST] = {
+  //expression | argsMult, expression
+  (argsMult ~ T_Comma ~ expression) ^^ {
+    case a ~ b ~ c => {
+      b match {
+        case _ => expression
+        case T_Comma => argsMult ++ expression
+      }
+    }
+  }
+}

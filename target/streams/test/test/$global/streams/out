@@ -1,0 +1,20 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(TACGenTest, org.scalatest.tools.Framework$$anon$1@491d8633, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(CFICodegenTest, org.scalatest.tools.Framework$$anon$1@491d8633, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(LexerTest, org.scalatest.tools.Framework$$anon$1@491d8633, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(CompilerTest, org.scalatest.tools.Framework$$anon$1@491d8633, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(CodegenTest, org.scalatest.tools.Framework$$anon$1@491d8633, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParserTest, org.scalatest.tools.Framework$$anon$1@491d8633, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(CFGGeneratorTest, org.scalatest.tools.Framework$$anon$1@491d8633, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 408 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 32[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 7, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 32, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CodegenTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CompilerTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	LexerTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CFGGeneratorTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TACGenTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ParserTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CFICodegenTest[0m
