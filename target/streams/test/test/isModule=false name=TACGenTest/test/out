@@ -1,9 +1,0 @@
-[0m[[0m[0minfo[0m] [0m[0m[32mTACGenTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should translate If Statements correctly[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should translate While Statements correctly[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should translate RepeatUntil Statements correctly[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should translate Assignments correctly[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should translate Binary Expression correctly[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should translate Sequences correctly[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should translate Function invokations correctly[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should translate Programs correctly[0m[0m

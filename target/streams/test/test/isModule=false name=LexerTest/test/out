@@ -1,9 +1,0 @@
-[0m[[0m[0minfo[0m] [0m[0m[32mLexerTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should tokenise Integer Literals correctly[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should tokenise Identifiers correctly[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should tokenise keywords correctly[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should tokenise brackets correctly[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should tokenise operators correctly[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should tokenise arithmetic operators correctly[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should tokenise boolean operators correctly[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should produce errors where appropiate[0m[0m
